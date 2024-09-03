@@ -60,6 +60,23 @@
             to { text-shadow: 0 0 20px #007BFF, 0 0 30px #007BFF; }
         }
 
+        .profile-picture {
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            width: 150px; /* Adjust size as needed */
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid #007BFF;
+            box-shadow: 0 0 15px rgba(0,0,0,0.8); /* Add some shadow for better visibility */
+            animation: profileFadeIn 1.5s ease-out;
+        }
+
+        @keyframes profileFadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
         .main-content {
             padding: 20px;
             margin-top: 20px;
@@ -172,6 +189,9 @@
     </header>
 
     <div class="container">
+        <!-- Profile Picture -->
+        <img src="image.jpg" class="profile-picture">
+
         <div class="main-content">
             <h2 class="section-title">🔹 Driven Student | Open to Opportunities | Aspiring Engineer 🔹</h2>
 
@@ -204,7 +224,7 @@
             <div id="achievements" class="tab-content">
                 <h3>🏆 Achievements:</h3>
                 <p>
-                    🌟 Successfully completed "The Complete C Language Course" at C Programming Bootcamp, showcasing my dedication to mastering the intricacies of C programming and honing my software development skills. This achievement reflects my determination to excel in my field and contribute meaningfully to projects.
+                    🥇 Secured 1st place in a prestigious <strong>Coding Contest</strong> held at Aditya University in 2023, showcasing exceptional problem-solving abilities and coding proficiency.
                 </p>
             </div>
 
@@ -212,19 +232,13 @@
                 <h3>🎓 Education:</h3>
                 <ul>
                     <li>
-                        <strong>Aditya Engineering College</strong><br>
-                        B.Tech in Computer Science Engineering<br>
-                        Jul 2023 - May 2027 (expected)<br>
-                        • Engaged in a rigorous curriculum emphasizing theoretical knowledge and practical application in computer science and engineering. Actively involved in projects and collaborative initiatives to gain hands-on experience.
+                        <strong>Aditya University</strong><br>
+                        Bachelor's Degree in Computer Science Engineering<br>
+                        Aug 2021 - Present<br>
+                        • Currently pursuing my degree with a focus on Software Development, Algorithms, and Data Structures.
                     </li>
                     <li>
-                        <strong>Tirumala Junior College</strong><br>
-                        Junior High/Intermediate/Middle School Education<br>
-                        Sep 2021 - Apr 2023<br>
-                        • Maintained an exceptional grade point average of 9.72, demonstrating academic excellence and a strong work ethic.
-                    </li>
-                    <li>
-                        <strong>DR. K.K.R. GOWTHAM SCHOOL</strong><br>
+                        <strong>GOWTHAM SCHOOL</strong><br>
                         High School<br>
                         Jan 2010 - Mar 2021<br>
                         • Graduated with distinction, attaining a grade point average of 9.80, and laying a solid foundation for my academic journey.

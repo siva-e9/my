@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chitturi Dola Satya Siva Shankar Baba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            user-select: none; /* Disable text selection */
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            animation: fadeIn 2s ease-in-out; /* Fade-in animation for the whole page */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            animation: slideIn 1s ease-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #ccc 3px solid;
+            text-align: center;
+            animation: headerFadeIn 2s ease-out;
+        }
+        @keyframes headerFadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        header h1 {
+            margin: 0;
+            animation: textGlow 1.5s infinite alternate;
+        }
+        @keyframes textGlow {
+            from { text-shadow: 0 0 5px #fff; }
+            to { text-shadow: 0 0 20px #007BFF, 0 0 30px #007BFF; }
+        }
+        .main-content {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1; /* Ensure content is above the overlay */
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .section-title {
+            color: #333;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            animation: underlinePulse 1.5s infinite;
+        }
+        @keyframes underlinePulse {
+            0% { border-bottom-color: #007BFF; }
+            50% { border-bottom-color: #00f; }
+            100% { border-bottom-color: #007BFF; }
+        }
+        .contact-info a {
+            color: #007BFF;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .contact-info a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+        .interests {
+            margin-top: 20px;
+        }
+        .interests p {
+            margin: 5px 0;
+        }
+        .tabs {
+            overflow: hidden;
+            background: #333;
+            border-radius: 8px;
+            margin-top: 20px;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease;
+        }
+        .tabs button {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 14px 20px;
+            cursor: pointer;
+            border-radius: 8px 8px 0 0;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .tabs button.active {
+            background: #007BFF;
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .tabs button:hover {
+            background: #0056b3;
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: #fff;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: flyUp 0.5s ease-out;
+        }
+        @keyframes flyUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .tab-content.active {
+            display: block;
+        }
+        /* Overlay text to make content uncopyable */
+        .container::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+            text-align: center;
+            line-height: 100px;
+            font-size: 24px;
+            pointer-events: none;
+            z-index: 2; /* Make sure it is above the content */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌟 CHITTURI DOLA SATYA SIVA SHANKAR BABA 🌟</h1>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <h2 class="section-title">🔹 Driven Student | Open to Opportunities | Aspiring Engineer 🔹</h2>
+
+            <!-- Tabs for section navigation -->
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab('about')">👨‍💼 About Me</button>
+                <button class="tab-button" onclick="openTab('skills')">🚀 Key Skills</button>
+                <button class="tab-button" onclick="openTab('achievements')">🏆 Achievements</button>
+                <button class="tab-button" onclick="openTab('education')">🎓 Education</button>
+                <button class="tab-button" onclick="openTab('connect')">🌐 Connect with Me</button>
+                <button class="tab-button" onclick="openTab('platforms')">🔗 My Platforms</button>
+                <button class="tab-button" onclick="openTab('interests')">🌟 Interests</button>
+            </div>
+
+            <!-- Tab content sections -->
+            <div id="about" class="tab-content active">
+                <h3>👨‍💼 About Me:</h3>
+                <p>
+                    🎓 Currently pursuing a Bachelor's degree in Computer Science Engineering at Aditya University, I am a dedicated and proactive student eager to make a meaningful impact in the tech industry. With a fervent passion for problem-solving and a thirst for knowledge, I am constantly seeking new challenges to push my boundaries and expand my skill set.
+                </p>
+            </div>
+
+            <div id="skills" class="tab-content">
+                <h3>🚀 Key Skills:</h3>
+                <p>
+                    ✅ Proficient in C Programming Language, equipped with a solid foundation and practical expertise. I thrive in environments that demand critical thinking, logical reasoning, and innovative solutions. Committed to continuously refining my programming prowess to tackle complex problems effectively.
+                </p>
+            </div>
+
+            <div id="achievements" class="tab-content">
+                <h3>🏆 Achievements:</h3>
+                <p>
+                    🌟 Successfully completed "The Complete C Language Course" at C Programming Bootcamp, showcasing my dedication to mastering the intricacies of C programming and honing my software development skills. This achievement reflects my determination to excel in my field and contribute meaningfully to projects.
+                </p>
+            </div>
+
+            <div id="education" class="tab-content">
+                <h3>🎓 Education:</h3>
+                <ul>
+                    <li>
+                        <strong>Aditya Engineering College</strong><br>
+                        B.Tech in Computer Science Engineering<br>
+                        Jul 2023 - May 2027 (expected)<br>
+                        • Engaged in a rigorous curriculum emphasizing theoretical knowledge and practical application in computer science and engineering. Actively involved in projects and collaborative initiatives to gain hands-on experience.
+                    </li>
+                    <li>
+                        <strong>Tirumala Junior College</strong><br>
+                        Junior High/Intermediate/Middle School Education<br>
+                        Sep 2021 - Apr 2023<br>
+                        • Maintained an exceptional grade point average of 9.72, demonstrating academic excellence and a strong work ethic.
+                    </li>
+                    <li>
+                        <strong>DR. K.K.R. GOWTHAM SCHOOL</strong><br>
+                        High School<br>
+                        Jan 2010 - Mar 2021<br>
+                        • Graduated with distinction, attaining a grade point average of 9.80, and laying a solid foundation for my academic journey.
+                    </li>
+                </ul>
+            </div>
+
+            <div id="connect" class="tab-content">
+                <h3 class="section-title">🌐 Connect with Me:</h3>
+                <p>
+                    I welcome opportunities to connect with fellow professionals, mentors, and industry experts. Feel free to reach out to me on <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> to explore potential collaborations or share insights into the dynamic world of technology. You can also connect via email at <a href="mailto:chdsssbaba@gmail.com">chdsssbaba@gmail.com</a>.
+                </p>
+            </div>
+
+            <div id="platforms" class="tab-content">
+                <h3 class="section-title">🔗 My Platforms:</h3>
+                <p>
+                    Explore my coding skills and projects on my dedicated platform: <a href="https://heylink.me/mr-siva/" target="_blank">My Coding Skills Platform</a>.
+                </p>
+                <p>
+                    Discover various AI tools I use and recommend: <a href="https://heylink.me/mr_Siva/" target="_blank">AI Tools</a>.
+                </p>
+            </div>
+
+            <div id="interests" class="tab-content">
+                <h3 class="section-title">🌟 Interests:</h3>
+                <p>
+                    In my leisure time, I indulge in the enriching realms of literature and music, finding inspiration in diverse genres and narratives. Additionally, I am an avid badminton enthusiast, always eager to engage in friendly matches and stay physically active.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabId) {
+            // Hide all tab content
+            var contents = document.querySelectorAll('.tab-content');
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+                content.style.animation = 'none'; // Reset animation
+            });
+
+            // Remove active class from all tab buttons
+            var buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(function(button) {
+                button.classList.remove('active');
+            });
+
+            // Show the selected tab content
+            var selectedContent = document.getElementById(tabId);
+            selectedContent.classList.add('active');
+            selectedContent.style.animation = 'flyUp 0.5s ease-out'; // Apply animation
+            // Set the clicked button to active
+            document.querySelector('[onclick="openTab(\'' + tabId + '\')"]').classList.add('active');
+        }
+    </script>
+</body>
+</html>
